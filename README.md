@@ -1,5 +1,8 @@
 # Swift-project-BouncyBallGame
-Here is a bouncy ball game made on Swift. 
+Here are some apps I've made during my Apple Coding Co-op 
 
 
-The objective being to get all the yellow squares by moving the platforms
+Bouncy Ball -The objective is to get all the yellow squares by moving the platforms
+
+
+Boogie Bot - My First Animation created in Swift
