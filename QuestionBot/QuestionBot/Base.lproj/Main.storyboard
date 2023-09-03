@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wVz-LV-Rjr">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Jbv-6y-k1f">
+            <objects>
+                <viewController id="wVz-LV-Rjr" customClass="ViewController" customModule="QuestionBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xrx-PO-oO0">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF7-r3-cfe">
+                                <rect key="frame" x="84" y="116.00000000000001" width="306" height="40.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="6ax-cG-Val"/>
+                                </constraints>
+                                <string key="text">Howdy there traveler, I'm QuestionBot.
+Ask me a question.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7M6-Xt-ysQ">
+                                <rect key="frame" x="5" y="98" width="380" height="76.666666666666686"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="🤠">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="69" name=".AppleColorEmojiUI"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e3H-cR-DwP">
+                                <rect key="frame" x="10" y="98" width="380" height="76.666666666666686"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Gu-aH-lRt">
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="76.666666666666671"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9Gu-aH-lRt" firstAttribute="top" secondItem="e3H-cR-DwP" secondAttribute="topMargin" id="Kue-FG-oE6"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOk-EP-Q9a">
+                                <rect key="frame" x="5" y="302" width="380" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vHD-Sh-HRm"/>
+                                </constraints>
+                                <state key="normal" title="Ask" backgroundImage="enabled">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.55837226159793807" green="0.3377555915661356" blue="0.34630290792711438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <state key="disabled" backgroundImage="disabled"/>
+                                <connections>
+                                    <action selector="askButtonTapped:" destination="wVz-LV-Rjr" eventType="touchUpInside" id="2bL-DB-EKD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question..." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-1A-5xc">
+                                <rect key="frame" x="5" y="182" width="380" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="G6Z-qF-kz1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="editingChanged:" destination="wVz-LV-Rjr" eventType="editingChanged" id="hQe-TD-vXL"/>
+                                    <outlet property="delegate" destination="wVz-LV-Rjr" id="8p2-zE-5b2"/>
+                                </connections>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="bTT-EI-Xi7">
+                                <rect key="frame" x="5" y="354" width="390" height="2304"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E2u-zw-r5O"/>
+                        <color key="backgroundColor" red="0.85490196939999996" green="0.61176472900000001" blue="0.26274511220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="e3H-cR-DwP" firstAttribute="leading" secondItem="E2u-zw-r5O" secondAttribute="leading" constant="10" id="AFf-WZ-zAD"/>
+                            <constraint firstItem="8Ob-1A-5xc" firstAttribute="top" secondItem="TF7-r3-cfe" secondAttribute="bottom" constant="25.333333333333371" id="Ai8-5f-8nd"/>
+                            <constraint firstItem="SOk-EP-Q9a" firstAttribute="trailing" secondItem="7M6-Xt-ysQ" secondAttribute="trailing" id="CNl-zZ-aDb"/>
+                            <constraint firstItem="TF7-r3-cfe" firstAttribute="top" secondItem="E2u-zw-r5O" secondAttribute="top" constant="71.999999999999986" id="Gjf-Tw-l0E"/>
+                            <constraint firstItem="SOk-EP-Q9a" firstAttribute="leading" secondItem="E2u-zw-r5O" secondAttribute="leading" constant="5" id="H4D-gs-LIT"/>
+                            <constraint firstItem="SOk-EP-Q9a" firstAttribute="trailing" secondItem="8Ob-1A-5xc" secondAttribute="trailing" id="HhH-qd-Yoe"/>
+                            <constraint firstItem="bTT-EI-Xi7" firstAttribute="top" secondItem="SOk-EP-Q9a" secondAttribute="bottom" constant="8" id="I2h-QQ-ti1"/>
+                            <constraint firstItem="SOk-EP-Q9a" firstAttribute="top" secondItem="8Ob-1A-5xc" secondAttribute="bottom" constant="20" id="MrP-jm-GBB"/>
+                            <constraint firstItem="TF7-r3-cfe" firstAttribute="trailing" secondItem="E2u-zw-r5O" secondAttribute="trailing" id="Nq3-vX-y9K"/>
+                            <constraint firstItem="SOk-EP-Q9a" firstAttribute="leading" secondItem="8Ob-1A-5xc" secondAttribute="leading" id="OVw-5m-mFD"/>
+                            <constraint firstItem="e3H-cR-DwP" firstAttribute="centerX" secondItem="bTT-EI-Xi7" secondAttribute="centerX" id="RZu-xf-cTx"/>
+                            <constraint firstItem="SOk-EP-Q9a" firstAttribute="leading" secondItem="7M6-Xt-ysQ" secondAttribute="leading" id="UTW-dW-lvi"/>
+                            <constraint firstItem="TF7-r3-cfe" firstAttribute="trailing" secondItem="e3H-cR-DwP" secondAttribute="trailing" id="Wem-Qr-PAP"/>
+                            <constraint firstItem="SOk-EP-Q9a" firstAttribute="leading" secondItem="bTT-EI-Xi7" secondAttribute="leading" id="ckH-aZ-t52"/>
+                            <constraint firstItem="TF7-r3-cfe" firstAttribute="centerY" secondItem="e3H-cR-DwP" secondAttribute="centerY" id="eM3-nM-5pM"/>
+                            <constraint firstItem="SOk-EP-Q9a" firstAttribute="centerX" secondItem="Xrx-PO-oO0" secondAttribute="centerX" id="f22-XE-WNy"/>
+                            <constraint firstItem="e3H-cR-DwP" firstAttribute="top" secondItem="7M6-Xt-ysQ" secondAttribute="top" id="fAb-YY-W6v"/>
+                            <constraint firstItem="TF7-r3-cfe" firstAttribute="centerY" secondItem="7M6-Xt-ysQ" secondAttribute="centerY" id="mqF-BN-6Jj"/>
+                            <constraint firstItem="TF7-r3-cfe" firstAttribute="leading" secondItem="E2u-zw-r5O" secondAttribute="leading" constant="84" id="tiT-IR-mX9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="askButton" destination="SOk-EP-Q9a" id="Giz-q5-vmd"/>
+                        <outlet property="questionField" destination="8Ob-1A-5xc" id="Vda-W6-k92"/>
+                        <outlet property="responseLabel" destination="TF7-r3-cfe" id="Gyr-JD-DHA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ot7-A5-blb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.53846153846155" y="338.38862559241704"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background1" width="1728" height="2304"/>
+        <image name="disabled" width="13.666666984558105" height="13.666666984558105"/>
+        <image name="enabled" width="13" height="13"/>
+    </resources>
+</document>
