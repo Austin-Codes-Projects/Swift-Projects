@@ -1,4 +1,4 @@
-# Swift-project-BouncyBallGame
+# Swift-project
 Here are some apps I've made during my Apple Coding Co-op 
 
 
